@@ -1,13 +1,19 @@
 import socket
 from baseDatos import baseDatos
 
+direccion_ip = "localhost"
+
 #Se establece comunicación con la base de datos
-db = baseDatos()
+try:
+    db = baseDatos()
+except:
+    print("No se pudo establecer conexión con la base de datos.")
+    exit()
 
 def iniciar_socket():
     #Configuración del socket para usar IPV4 y TCP/IP
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind(("localhost", 5000))
+    server_socket.bind((direccion_ip, 5000))
     server_socket.listen(1)
     return server_socket
 
