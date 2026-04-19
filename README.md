@@ -17,4 +17,4 @@ py cliente.py
 ```
 
 > [!NOTE]
-> Para finalizar el cliente envíe la palabra "éxito" como mensaja.
+> Para finalizar el cliente envíe la palabra "éxito" como mensaje.
